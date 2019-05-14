@@ -1,68 +1,53 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Would You Rather - React Nano-Degree Second Project  
+  
+I forked the github starter repository that had the _DATA.js file that contained the mocked DB and worked on the project on my local machine.  
+I have checked in all the code in the `master` branch of my forked repo.   
+  
+## Instructions - how to compile & run the project  
+After cloning the git repository or downloading the zip file, please open the terminal and go into the project root repository i.e. you should be in `reactnd-project-would-you-rather` directory  
+  
+Step 1.   
+  
+* install all project dependencies with `npm install`  
+  
+Step 2. When the Step 1. is complete (it should complete without any errors), run the following command to open the project landing page in your default browser window  
+  
+* run the project with `npm start`  
+  
+When Step 2. is completed, you will see the `http://localhost:3000/` url in your browser tab.  
+  
+# Would-You-Rather Project - Description 
+Would-You-Rather is the second project in Udacity React Nano-Degree program.  
+The project aims to give the users a hands-on practice on React & Redux.  
+  
+This projects displays a poll to the user in the form of `Would you rather...`  
+* choose to do this   
+* choose to do that  
+  
+  
+The project starts with a login page where the user names are loaded from a mocked db and displayed inside a dropdown; user chooses a name from the list and clicks on the `Sign In` button.  
+  
+There is a `navigation` component at top of each page the user views. The navigation component has three links:  
+* Home  
+* New Question  
+* Leader Board  
+  
+The logged in user information is also displayed on the top of each page with the user name and the avatar. There is a logout button at the top right with the help of which user can logout at anytime.  
+  
+After successful login, the user lands on the `home` page that divides the poll questions into two tabs  
+* Unanswered Questions  
+* Answered Questions  
+by the user. User can click on the `View Poll` button on any question in each tab that takes the user to that particular question's detail page. If it was unanswered by the user, user can submit an answer and if it was answered, user sees the result of the poll, with an indication of what answer did she gave. 
+As the user records an answer against an unanswered question, it is moved to the `answered questions` tab. 
 
-## Available Scripts
+The `new question` tab let's the user create a question, which also starts appearing in the `unanswered questions` tab. 
 
-In the project directory, you can run:
+There is a `Leader Board` as well that shows the stats about users. A user score is calculated as the `sum of the questions answered and questions created`, a user with a higher score appears on the top. The `leader board` is dynamically updated, as the user keeps answering/creating questions.
 
-### `npm start`
-
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Login Required
+A user cannot access any page without signing in. So if a user accesses a link directly from the browser's address bar, user is redirected to the `sign-in` page first. 
+  
+  
+## Invalid Links Handling  
+The project also handles the invalid links entered directly in the browser tab's address bar.  
+For example if a user enters something like `http://localhost:3000/blablaba` they will see a 404 not found page, rather than a blank page.
